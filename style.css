@@ -1,0 +1,16 @@
+/*primary text colors */
+/* neutral text colors */
+/* background gradient */
+/* divider */
+/* body copy */
+/* font */
+body {
+  min-height: 100vh;
+  background: linear-gradient(#af67e9, #6565e7);
+}
+
+main {
+  min-height: 90vh;
+}
+
+/*# sourceMappingURL=style.css.map */

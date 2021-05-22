@@ -1,1 +1,10 @@
 @use './config';
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(config.$soft-violet, config.$soft-blue);
+}
+
+main {
+    min-height: 90vh;
+}
