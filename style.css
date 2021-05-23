@@ -4,9 +4,19 @@
 /* divider */
 /* body copy */
 /* font */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   min-height: 100vh;
   background: linear-gradient(#af67e9, #6565e7);
+  font-size: 12px;
 }
 
 main {
@@ -17,13 +27,12 @@ main {
 }
 
 .card {
-  max-width: 1000px;
+  min-width: 1000px;
   min-height: 500px;
   background-color: white;
   display: flex;
   border-radius: 1rem;
 }
-
 .card > * {
   flex: 0 0 50%;
 }
@@ -44,10 +53,30 @@ main {
   top: 4.7rem;
 }
 
+#img-bg-pattern {
+  position: absolute;
+  top: -18.5rem;
+  left: -36rem;
+}
+
 #img-box {
   position: absolute;
   left: -5.7rem;
   top: 13rem;
+}
+
+.faq {
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
+}
+.faq > h1 {
+  font-size: 2rem;
+}
+.faq > ul {
+  list-style-type: none;
+  padding-inline-start: 0rem;
 }
 
 /*# sourceMappingURL=style.css.map */

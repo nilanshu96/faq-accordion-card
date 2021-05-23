@@ -3,6 +3,7 @@
 body {
     min-height: 100vh;
     background: linear-gradient(config.$soft-violet, config.$soft-blue);
+    font-size: config.$body-font-size;
 }
 
 main {
@@ -13,15 +14,15 @@ main {
 }
 
 .card {
-    max-width: 1000px;
+    min-width: 1000px;
     min-height: 500px;
     background-color: white;
     display: flex;
     border-radius: 1rem;
-}
 
-.card > * {
-    flex: 0 0 50%;
+    & > * {
+        flex: 0 0 50%;
+    }
 }
 
 .image-container {
@@ -41,8 +42,31 @@ main {
     top: 4.7rem;
 }
 
+#img-bg-pattern {
+    position: absolute;
+    
+    top: -18.5rem;
+    left: -36rem;
+}
+
 #img-box {
     position: absolute;
     left: -5.7rem;
     top: 13rem;
+}
+
+.faq {
+    font-family: config.$font-family-kumbh-sans;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.5rem;
+
+    & > h1 {
+        font-size: 2rem;
+    }
+
+    & > ul {
+        list-style-type: none;
+        padding-inline-start: 0rem;
+    }
 }

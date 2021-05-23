@@ -18,3 +18,12 @@ $body-font-size: 12px;
 
 /* font */
 $font-family-kumbh-sans: 'Kumbh Sans', sans-serif;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
