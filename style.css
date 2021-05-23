@@ -17,9 +17,37 @@ main {
 }
 
 .card {
-  min-width: 500px;
+  max-width: 1000px;
   min-height: 500px;
   background-color: white;
+  display: flex;
+  border-radius: 1rem;
+}
+
+.card > * {
+  flex: 0 0 50%;
+}
+
+.image-container {
+  position: relative;
+}
+.image-container__online-desktop {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#img-woman-online-desktop {
+  position: absolute;
+  left: -5.2rem;
+  top: 4.7rem;
+}
+
+#img-box {
+  position: absolute;
+  left: -5.7rem;
+  top: 13rem;
 }
 
 /*# sourceMappingURL=style.css.map */
