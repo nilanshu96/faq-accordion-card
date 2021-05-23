@@ -7,4 +7,13 @@ body {
 
 main {
     min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    min-width: 500px;
+    min-height: 500px;
+    background-color: white;
 }
