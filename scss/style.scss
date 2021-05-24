@@ -1,72 +1,133 @@
 @use './config';
 
 body {
-    min-height: 100vh;
-    background: linear-gradient(config.$soft-violet, config.$soft-blue);
-    font-size: config.$body-font-size;
+  min-height: 100vh;
+  background: linear-gradient(config.$soft-violet, config.$soft-blue);
+  font-size: config.$body-font-size;
 }
 
 main {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
-    min-width: 1000px;
-    min-height: 500px;
-    background-color: white;
-    display: flex;
-    border-radius: 1rem;
+  min-width: 1000px;
+  min-height: 480px;
+  background-color: white;
+  display: flex;
+  border-radius: 1rem;
 
-    & > * {
-        flex: 0 0 50%;
-    }
+  & > * {
+    flex: 0 0 50%;
+  }
 }
 
 .image-container {
+  position: relative;
+
+  &__online-desktop {
+    width: 100%;
+    height: 100%;
     position: relative;
-    
-    &__online-desktop {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-    }
+    overflow: hidden;
+  }
 }
 
-#img-woman-online-desktop {    
-    position: absolute;
-    left: -5.2rem;
-    top: 4.7rem;
+#img-woman-online-desktop {
+  position: absolute;
+  left: -5.2rem;
+  top: 4.7rem;
 }
 
 #img-bg-pattern {
-    position: absolute;
-    
-    top: -18.5rem;
-    left: -36rem;
+  position: absolute;
+
+  top: -18.5rem;
+  left: -36rem;
 }
 
 #img-box {
-    position: absolute;
-    left: -5.7rem;
-    top: 13rem;
+  position: absolute;
+  left: -5.7rem;
+  top: 13rem;
 }
 
 .faq {
-    font-family: config.$font-family-kumbh-sans;
-    display: flex;
-    flex-direction: column;
-    padding-top: 2.5rem;
+  font-family: config.$font-family-kumbh-sans;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
+  color: config.$dark-grayish-blue;
 
-    & > h1 {
-        font-size: 2rem;
-    }
+  & > h1 {
+    font-size: 2rem;
+    color: config.$very-dark-desaturated-blue;
+  }
 
-    & > ul {
-        list-style-type: none;
-        padding-inline-start: 0rem;
+  & > ul {
+    list-style-type: none;
+    padding-inline-start: 0rem;
+    max-width: 80%;
+  }
+}
+
+.faq__item {
+  
+  position: relative;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: 1px solid config.$light-grayish-blue;
+
+  label {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      cursor: pointer;
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  h3 {
+    margin-block-end: 0;
+    margin-block-start: 0;
+    display: inline-block;
+    &:hover {
+      color: config.$soft-red;
     }
+  }
+
+  p {
+    position: absolute;
+    z-index: -1;
+  }
+
+  img {
+    justify-self: right;
+    align-self: center;
+  }
+
+  input[type="checkbox"]:checked ~ p {
+    position: relative;
+    z-index: 0;
+    line-height: 1.7;
+    margin-block-end: 0;
+  }
+
+  input[type="checkbox"]:checked ~ label img {
+    transform: scaleY(-1);
+  }
+
+  input[type="checkbox"]:checked ~ label h3 {
+    color: config.$very-dark-grayish-blue;
+  }
 }

@@ -28,7 +28,7 @@ main {
 
 .card {
   min-width: 1000px;
-  min-height: 500px;
+  min-height: 480px;
   background-color: white;
   display: flex;
   border-radius: 1rem;
@@ -70,13 +70,65 @@ main {
   display: flex;
   flex-direction: column;
   padding-top: 2.5rem;
+  color: #787887;
 }
 .faq > h1 {
   font-size: 2rem;
+  color: #1d1e35;
 }
 .faq > ul {
   list-style-type: none;
   padding-inline-start: 0rem;
+  max-width: 80%;
+}
+
+.faq__item {
+  position: relative;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: 1px solid #e7e7e9;
+}
+.faq__item label {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  cursor: pointer;
+}
+.faq__item input[type=checkbox] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+}
+.faq__item h3 {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  display: inline-block;
+}
+.faq__item h3:hover {
+  color: #f47c57;
+}
+.faq__item p {
+  position: absolute;
+  z-index: -1;
+}
+.faq__item img {
+  justify-self: right;
+  align-self: center;
+}
+.faq__item input[type=checkbox]:checked ~ p {
+  position: relative;
+  z-index: 0;
+  line-height: 1.7;
+  margin-block-end: 0;
+}
+.faq__item input[type=checkbox]:checked ~ label img {
+  transform: scaleY(-1);
+}
+.faq__item input[type=checkbox]:checked ~ label h3 {
+  color: #4a4b5e;
 }
 
 /*# sourceMappingURL=style.css.map */
