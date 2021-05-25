@@ -139,7 +139,7 @@ main {
   font-weight: 700;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1064px) {
   main {
     align-items: flex-start;
   }
@@ -149,6 +149,7 @@ main {
     margin-top: 10rem;
     max-height: max-content;
     width: 80vw;
+    max-width: 640px;
     flex-direction: column;
     border-radius: 2rem;
   }
