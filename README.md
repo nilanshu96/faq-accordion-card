@@ -51,8 +51,8 @@ I learned to tweak the checkbox input to hide and show elements
 ### Continued development
 
 I'm planning to create more complex flex and grid layouts. Things to learn from feedback:
-- add alt="" for decorative images and not remove it from img elements. No h1-h6 inside a label tag.
-- learn abouth <detail> and <summary> tags. Link: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+- add alt=" " for decorative images and not remove it from img elements. No h1-h6 inside a label tag.
+- learn abouth `<detail>` and `<summary>` tags. Link: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
 - styling of detail tag: https://freefrontend.com/html-details-summary-css/
 
 ### Useful resources
