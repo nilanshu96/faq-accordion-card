@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
   padding: 0;
   margin: 0;
 }
@@ -46,6 +46,9 @@ main {
   position: relative;
   overflow: hidden;
 }
+.image-container__online-mobile {
+  display: none;
+}
 
 #img-woman-online-desktop {
   position: absolute;
@@ -53,7 +56,7 @@ main {
   top: 4.7rem;
 }
 
-#img-bg-pattern {
+#img-bg-pattern-desktop {
   position: absolute;
   top: -18.5rem;
   left: -36rem;
@@ -106,6 +109,8 @@ main {
   margin-block-end: 0;
   margin-block-start: 0;
   display: inline-block;
+  font-weight: 400;
+  color: #4a4b5e;
 }
 .faq__item h3:hover {
   color: #f47c57;
@@ -128,14 +133,27 @@ main {
   transform: scaleY(-1);
 }
 .faq__item input[type=checkbox]:checked ~ label h3 {
-  color: #4a4b5e;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 900px) {
+  main {
+    align-items: flex-start;
+  }
+
   .card {
     min-width: 0;
-    max-width: 500px;
+    margin-top: 10rem;
+    max-height: max-content;
+    width: 80vw;
     flex-direction: column;
+  }
+  .card article {
+    padding: 2rem;
+    display: block;
+  }
+  .card .faq__item img {
+    margin-left: 1rem;
   }
 
   .card > * {
@@ -143,17 +161,38 @@ main {
   }
   .card > * h1 {
     text-align: center;
+    margin-block-end: 0;
   }
   .card > * ul {
     max-width: 100%;
   }
 
   .image-container {
-    height: 200px;
+    height: 80px;
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
   }
   .image-container__online-desktop {
     display: none;
+  }
+  .image-container__online-mobile {
+    display: block;
+    position: relative;
+  }
+  .image-container #img-box {
+    display: none;
+  }
+  .image-container #img-woman-online-mobile {
+    position: absolute;
+    top: -6.6rem;
+    left: -9.2rem;
+  }
+  .image-container #img-bg-pattern-mobile {
+    position: absolute;
+    top: 0;
+    left: -7.4rem;
   }
 }
 

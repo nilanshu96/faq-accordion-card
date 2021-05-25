@@ -14,6 +14,7 @@ main {
 }
 
 .card {
+  
   min-width: 960px;
   min-height: 480px;
   background-color: white;
@@ -34,6 +35,10 @@ main {
     position: relative;
     overflow: hidden;
   }
+
+  &__online-mobile {
+    display: none;
+  }
 }
 
 #img-woman-online-desktop {
@@ -42,7 +47,7 @@ main {
   top: 4.7rem;
 }
 
-#img-bg-pattern {
+#img-bg-pattern-desktop {
   position: absolute;
 
   top: -18.5rem;
@@ -105,6 +110,8 @@ main {
     &:hover {
       color: config.$soft-red;
     }
+    font-weight: 400;
+    color: config.$very-dark-grayish-blue;
   }
 
   p {
@@ -129,15 +136,32 @@ main {
   }
 
   input[type="checkbox"]:checked ~ label h3 {
-    color: config.$very-dark-grayish-blue;
+    
+    font-weight: 700;
   }
 }
 
 @include config.mobile {
+
+    main {
+      align-items: flex-start;
+    }
+
     .card {
         min-width: 0;
-        max-width: 500px;
+        margin-top: 10rem;
+        max-height: max-content;
+        width: 80vw;
         flex-direction: column;
+
+        article {
+          padding: 2rem;
+          display: block;
+        }
+
+        .faq__item img {
+          margin-left: 1rem;
+        }
     }
 
     .card > * {
@@ -145,6 +169,7 @@ main {
 
       h1 {
           text-align: center;
+          margin-block-end: 0;
       }
 
       ul {
@@ -153,11 +178,37 @@ main {
     }
 
     .image-container {
-        height: 200px;
+        height: 80px;
         flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
 
         &__online-desktop {
             display: none;
         }
+
+        &__online-mobile {
+          display: block;
+          position: relative;
+        }
+
+        #img-box {
+          display: none;
+        }
+
+        #img-woman-online-mobile {
+          position: absolute;
+          top: -6.6rem;
+          left: -9.2rem;
+        }
+
+        #img-bg-pattern-mobile {
+          position: absolute;
+          top: 0;
+          left: 1.8rem - 9.2rem;
+        }
+
+        
     }
 }
