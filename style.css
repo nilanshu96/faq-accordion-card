@@ -27,7 +27,7 @@ main {
 }
 
 .card {
-  min-width: 1000px;
+  min-width: 960px;
   min-height: 480px;
   background-color: white;
   display: flex;
@@ -129,6 +129,32 @@ main {
 }
 .faq__item input[type=checkbox]:checked ~ label h3 {
   color: #4a4b5e;
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    min-width: 0;
+    max-width: 500px;
+    flex-direction: column;
+  }
+
+  .card > * {
+    flex: auto;
+  }
+  .card > * h1 {
+    text-align: center;
+  }
+  .card > * ul {
+    max-width: 100%;
+  }
+
+  .image-container {
+    height: 200px;
+    flex-grow: 1;
+  }
+  .image-container__online-desktop {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

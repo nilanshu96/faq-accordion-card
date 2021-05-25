@@ -14,7 +14,7 @@ main {
 }
 
 .card {
-  min-width: 1000px;
+  min-width: 960px;
   min-height: 480px;
   background-color: white;
   display: flex;
@@ -85,6 +85,7 @@ main {
       display: grid;
       grid-template-columns: repeat(2, auto);
       cursor: pointer;
+      
   }
 
   input[type="checkbox"] {
@@ -130,4 +131,33 @@ main {
   input[type="checkbox"]:checked ~ label h3 {
     color: config.$very-dark-grayish-blue;
   }
+}
+
+@include config.mobile {
+    .card {
+        min-width: 0;
+        max-width: 500px;
+        flex-direction: column;
+    }
+
+    .card > * {
+      flex: auto;
+
+      h1 {
+          text-align: center;
+      }
+
+      ul {
+          max-width: 100%;
+      }
+    }
+
+    .image-container {
+        height: 200px;
+        flex-grow: 1;
+
+        &__online-desktop {
+            display: none;
+        }
+    }
 }
