@@ -14,6 +14,7 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -64,3 +65,7 @@ I'm planning to create more complex flex and grid layouts. Things to learn from 
 - Website - [Nilanshu V Rajmane](https://github.com/nilanshu96)
 - Frontend Mentor - [@nilanshu96](https://www.frontendmentor.io/profile/nilanshu96)
 - Twitter - [@nilanshu96](https://www.twitter.com/nilanshu96)
+
+## Acknowledgments
+
+- feedback provided to me for the previous submission of this challenge - [feedback](## Acknowledgments)
