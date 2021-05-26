@@ -68,4 +68,4 @@ I'm planning to create more complex flex and grid layouts. Things to learn from 
 
 ## Acknowledgments
 
-- feedback provided to me for the previous submission of this challenge - [feedback](## Acknowledgments)
+- feedback provided to me for the previous submission of this challenge - [feedback](https://www.frontendmentor.io/solutions/css-and-html-EOe7tqJY2#feedback)
