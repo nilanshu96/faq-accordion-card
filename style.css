@@ -148,8 +148,8 @@ details[open] summary ~ * {
     padding: 2rem;
     display: block;
   }
-  .card .faq__item img {
-    margin-left: 1rem;
+  .card .faq__item summary {
+    font-size: 1em;
   }
 
   .card > * {
